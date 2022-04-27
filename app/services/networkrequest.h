@@ -26,7 +26,7 @@ private:
 	QByteArray data;
 
 signals:
-	void finished();
+	void finished(QByteArray &data);
 };
 
 #endif // NETWORKREQUEST_H

@@ -1,13 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include "networkrequest.h"
 #include "lib/3rdparty/json/json.hpp"
+#include "networkrequest.h"
+#include <QMainWindow>
 #include <iostream>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui
+{
+class MainWindow;
+}
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -19,7 +22,7 @@ public:
 	~MainWindow();
 
 private slots:
-	void Parser();
+	void Parser(QByteArray &data);
 
 private:
 	Ui::MainWindow *ui;
